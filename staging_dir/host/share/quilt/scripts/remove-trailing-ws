@@ -1,4 +1,4 @@
-#! /usr/bin/perl -w
+#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -w
 
 # Remove trailing whitespace from modified lines in working files.
 #
@@ -31,7 +31,7 @@ BEGIN {
 }
 
 setlocale(LC_MESSAGES, "");
-bindtextdomain("quilt", $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/locale' : "/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/share/locale");
+bindtextdomain("quilt", $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/locale' : "/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/locale");
 textdomain("quilt");
 
 sub _($) {

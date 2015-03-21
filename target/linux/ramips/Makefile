@@ -8,19 +8,19 @@ include $(TOPDIR)/rules.mk
 
 ARCH:=mipsel
 BOARD:=ramips
-BOARDNAME:=MTK/Ralink APSoC
-SUBTARGETS:=mt7620a mt7620n mt7621 mt7628
+BOARDNAME:=Ralink RT288x/RT3xxx
+SUBTARGETS:=rt305x mt7620 mt7621 mt7628 rt3883 rt288x
 FEATURES:=squashfs gpio
+MAINTAINER:=John Crispin <blogic@openwrt.org>
 
-LINUX_P4PATH:=//WIFI_SOC/MP/SDK_4_3_0_0/RT288x_SDK/source
-LINUX_P4REV:=112871
-LINUX_VERSION:=3.10.14-p$(LINUX_P4REV)
+KERNEL_PATCHVER:=3.18
 
 include $(INCLUDE_DIR)/target.mk
-DEFAULT_PACKAGES += 
+DEFAULT_PACKAGES += \
+	kmod-leds-gpio kmod-gpio-button-hotplug wpad-mini swconfig
 
 define Target/Description
-	Build firmware images for MTK/Ralink APSoC based boards.
+	Build firmware images for Ralink RT288x/RT3xxx based boards.
 endef
 
 $(eval $(call BuildTarget))

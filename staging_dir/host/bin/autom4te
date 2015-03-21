@@ -1,13 +1,12 @@
-#! /usr/bin/perl -w
+#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -w
 # -*- perl -*-
 # Generated from autom4te.in; do not edit by hand.
 
-eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -S "$0";; *) exec /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -S "$0" "$@";; esac'
     if 0;
 
 # autom4te - Wrapper around M4 libraries.
-# Copyright (C) 2001, 2002, 2003, 2005, 2006, 2007, 2008, 2009, 2010
-# Free Software Foundation, Inc.
+# Copyright (C) 2001-2003, 2005-2012 Free Software Foundation, Inc.
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -26,14 +25,14 @@ eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "
 BEGIN
 {
   my $pkgdatadir = $ENV{'autom4te_perllibdir'} ||
-	($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/autoconf' : '/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/share/autoconf');
+	($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/autoconf' : '/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/autoconf');
   unshift @INC, $pkgdatadir;
 
   # Override SHELL.  On DJGPP SHELL may not be set to a shell
   # that can handle redirection and quote arguments correctly,
   # e.g.: COMMAND.COM.  For DJGPP always use the shell that configure
   # has detected.
-  $ENV{'SHELL'} = '/bin/bash' if ($^O eq 'dos');
+  $ENV{'SHELL'} = '/usr/bin/env bash' if ($^O eq 'dos');
 }
 
 use Autom4te::C4che;
@@ -47,7 +46,7 @@ use strict;
 
 # Data directory.
 my $pkgdatadir = $ENV{'AC_MACRODIR'} ||
-	($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/autoconf' : '/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/share/autoconf');
+	($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/autoconf' : '/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/autoconf');
 
 # $LANGUAGE{LANGUAGE} -- Automatic options for LANGUAGE.
 my %language;
@@ -90,7 +89,7 @@ my @include;
 my $freeze = 0;
 
 # $M4.
-my $m4 = $ENV{"M4"} || ($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/bin/m4' : '/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin/m4');
+my $m4 = $ENV{"M4"} || ($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/bin/m4' : '/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/m4');
 # Some non-GNU m4's don't reject the --help option, so give them /dev/null.
 fatal "need GNU m4 1.4 or later: $m4"
   if system "$m4 --help </dev/null 2>&1 | grep reload-state >/dev/null";
@@ -207,8 +206,8 @@ General help using GNU software: <http://www.gnu.org/gethelp/>.
 # $VERSION
 # --------
 $version =  <<"EOF";
-autom4te (GNU Autoconf) 2.68
-Copyright (C) 2010 Free Software Foundation, Inc.
+autom4te (GNU Autoconf) 2.69
+Copyright (C) 2012 Free Software Foundation, Inc.
 License GPLv3+/Autoconf: GNU GPL version 3 or later
 <http://gnu.org/licenses/gpl.html>, <http://gnu.org/licenses/exceptions.html>
 This is free software: you are free to change and redistribute it.
@@ -275,7 +274,7 @@ sub load_configuration ($)
 
       if ($ENV{'STAGING_DIR'})
       {
-        @words = map { s!^/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/share/autoconf!$ENV{'STAGING_DIR'}/../host/share/autoconf!; $_ } @words;
+        @words = map { s!^/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/autoconf!$ENV{'STAGING_DIR'}/../host/share/autoconf!; $_ } @words;
       }
 
       if ($type eq 'begin-language:')
@@ -847,7 +846,7 @@ EOF
 
   # This is dubious: should we really transform the quadrigraphs in
   # traces?  It might break balanced [ ] etc. in the output.  The
-  # consensus seeems to be that traces are more useful this way.
+  # consensus seems to be that traces are more useful this way.
   while ($_ = $in->getline)
     {
       # It makes no sense to try to transform __oline__.

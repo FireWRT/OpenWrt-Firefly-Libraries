@@ -1,0 +1,5 @@
+mmc_block.ko
+mmc_core.ko
+mtk_sd.ko
+sdhci-pltfm.ko
+sdhci.ko

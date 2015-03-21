@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/bash
 
 #  This script is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License version 2 as

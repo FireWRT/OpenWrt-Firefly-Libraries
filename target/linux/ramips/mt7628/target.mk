@@ -9,8 +9,6 @@ FEATURES+=usb
 CPU_TYPE:=24kec
 CPU_SUBTYPE:=dsp
 
-DEFAULT_PACKAGES += 
-
 define Target/Description
 	Build firmware images for Ralink MT7628 based boards.
 endef

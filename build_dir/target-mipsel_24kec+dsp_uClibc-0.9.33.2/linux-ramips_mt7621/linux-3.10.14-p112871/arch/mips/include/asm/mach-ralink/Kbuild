@@ -1,3 +1,0 @@
-# UAPI Header export list
-header-y += rt_mmap.h
-

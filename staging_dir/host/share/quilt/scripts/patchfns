@@ -11,7 +11,7 @@ export TEXTDOMAIN=quilt
 if [ -n "$STAGING_DIR" ]; then
 	export TEXTDOMAINDIR="$STAGING_DIR/../host/share/locale"
 else
-	export TEXTDOMAINDIR=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/share/locale
+	export TEXTDOMAINDIR=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/locale
 fi
 
 : ${LC_CTYPE:=$LANG}

@@ -1,10 +1,9 @@
 #! /bin/sh
-# Generated from autoconf.as by GNU Autoconf 2.68.
+# Generated from autoconf.as by GNU Autoconf 2.69.
 # Generated from autoconf.in; do not edit by hand.
 # autoconf -- create `configure' using m4 macros
 
-# Copyright (C) 1992, 1993, 1994, 1996, 1999, 2000, 2001, 2002, 2003,
-# 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation,
+# Copyright (C) 1992-1994, 1996, 1999-2012 Free Software Foundation,
 # Inc.
 
 # This program is free software: you can redistribute it and/or modify
@@ -177,7 +176,8 @@ if ( set x; as_fn_ret_success y && test x = \"\$1\" ); then :
 else
   exitcode=1; echo positional parameters were not saved.
 fi
-test x\$exitcode = x0 || exit 1"
+test x\$exitcode = x0 || exit 1
+test -x / || exit 1"
   as_suggested=""
   if (eval "$as_required") 2>/dev/null; then :
   as_have_required=yes
@@ -216,21 +216,25 @@ IFS=$as_save_IFS
 
 
       if test "x$CONFIG_SHELL" != x; then :
-  # We cannot yet assume a decent shell, so we have to provide a
-	# neutralization value for shells without unset; and this also
-	# works around shells that cannot unset nonexistent variables.
-	# Preserve -v and -x to the replacement shell.
-	BASH_ENV=/dev/null
-	ENV=/dev/null
-	(unset BASH_ENV) >/dev/null 2>&1 && unset BASH_ENV ENV
-	export CONFIG_SHELL
-	case $- in # ((((
-	  *v*x* | *x*v* ) as_opts=-vx ;;
-	  *v* ) as_opts=-v ;;
-	  *x* ) as_opts=-x ;;
-	  * ) as_opts= ;;
-	esac
-	exec "$CONFIG_SHELL" $as_opts "$as_myself" ${1+"$@"}
+  export CONFIG_SHELL
+             # We cannot yet assume a decent shell, so we have to provide a
+# neutralization value for shells without unset; and this also
+# works around shells that cannot unset nonexistent variables.
+# Preserve -v and -x to the replacement shell.
+BASH_ENV=/dev/null
+ENV=/dev/null
+(unset BASH_ENV) >/dev/null 2>&1 && unset BASH_ENV ENV
+case $- in # ((((
+  *v*x* | *x*v* ) as_opts=-vx ;;
+  *v* ) as_opts=-v ;;
+  *x* ) as_opts=-x ;;
+  * ) as_opts= ;;
+esac
+exec $CONFIG_SHELL $as_opts "$as_myself" ${1+"$@"}
+# Admittedly, this is quite paranoid, since all the known shells bail
+# out after a failed `exec'.
+$as_echo "$0: could not re-execute with $CONFIG_SHELL" >&2
+exit 255
 fi
 
     if test x$as_have_required = xno; then :
@@ -377,8 +381,8 @@ GNU Autoconf home page: <http://www.gnu.org/software/autoconf/>.
 General help using GNU software: <http://www.gnu.org/gethelp/>."
 
 version="\
-autoconf (GNU Autoconf) 2.68
-Copyright (C) 2010 Free Software Foundation, Inc.
+autoconf (GNU Autoconf) 2.69
+Copyright (C) 2012 Free Software Foundation, Inc.
 License GPLv3+/Autoconf: GNU GPL version 3 or later
 <http://gnu.org/licenses/gpl.html>, <http://gnu.org/licenses/exceptions.html>
 This is free software: you are free to change and redistribute it.
@@ -397,7 +401,7 @@ exit_missing_arg='
 if test -n "$STAGING_DIR"; then
 	: ${AUTOM4TE="$STAGING_DIR/../host/bin/autom4te"}
 else
-	: ${AUTOM4TE='/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin/autom4te'}
+	: ${AUTOM4TE='/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/autom4te'}
 fi
 autom4te_options=
 outfile=

@@ -17,7 +17,7 @@ old_library='libgmpxx.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/lib /home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/lib/libgmp.la'
+dependency_libs=' -L/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/lib -L/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/usr/lib /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/lib/libgmp.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/lib'
+libdir='/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/lib'

@@ -1,5 +1,5 @@
-prefix=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host
-exec_prefix=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host
+prefix=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host
+exec_prefix=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 

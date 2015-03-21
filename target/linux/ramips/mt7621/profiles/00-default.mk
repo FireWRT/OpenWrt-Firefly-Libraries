@@ -5,18 +5,14 @@
 # See /LICENSE for more information.
 #
 
-define Profile/MT7621
+define Profile/Default
 	NAME:=Default Profile
 	PACKAGES:=\
-		-swconfig -rt2x00 \
-		ated hwnat reg gpio btnd switch ethstt uci2dat mii_mgr watchdog 8021xd \
-		wireless-tools block-mount fstools kmod-scsi-generic \
-		kmod-usb-core kmod-usb3 kmod-usb-storage \
-		kmod-fs-vfat kmod-fs-ntfs kmod-nls-base kmod-nls-utf8 kmod-nls-cp936 \
-		kmod-nls-cp437 kmod-nls-cp850 kmod-nls-iso8859-1 kmod-nls-iso8859-15 kmod-nls-cp950
+		kmod-usb-core kmod-usb3 \
+		kmod-ledtrig-usbdev
 endef
 
-define Profile/MT7621/Description
+define Profile/Default/Description
 	Default package set compatible with most boards.
 endef
-$(eval $(call Profile,MT7621))
+$(eval $(call Profile,Default))

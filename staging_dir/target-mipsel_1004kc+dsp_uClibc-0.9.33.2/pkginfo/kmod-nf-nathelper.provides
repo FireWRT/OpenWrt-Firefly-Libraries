@@ -1,0 +1,12 @@
+ip_tables.ko
+nf_conntrack.ko
+nf_conntrack_ftp.ko
+nf_conntrack_ipv4.ko
+nf_conntrack_irc.ko
+nf_conntrack_rtcache.ko
+nf_defrag_ipv4.ko
+nf_nat.ko
+nf_nat_ftp.ko
+nf_nat_ipv4.ko
+nf_nat_irc.ko
+x_tables.ko

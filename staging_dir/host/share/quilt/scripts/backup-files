@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/bash
 
 set -e
 # Keep /dev/null opened as we will need it repeatedly
@@ -53,7 +53,7 @@ usage ()
 "
 }
 
-: ${QUILT_DIR=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/share/quilt}
+: ${QUILT_DIR=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/quilt}
 . $QUILT_DIR/scripts/utilfns
 
 ensure_nolinks()

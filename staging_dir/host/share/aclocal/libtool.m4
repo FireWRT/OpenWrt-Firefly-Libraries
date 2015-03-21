@@ -7508,9 +7508,9 @@ m4_defun([_LT_DECL_EGREP],
 [AC_REQUIRE([AC_PROG_EGREP])dnl
 AC_REQUIRE([AC_PROG_FGREP])dnl
 test -z "$GREP" && GREP=grep
-_LT_DECL([], [GREP], [1], [A grep program that handles long lines])
-_LT_DECL([], [EGREP], [1], [An ERE matcher])
-_LT_DECL([], [FGREP], [1], [A literal string matcher])
+_LT_DECL([], [GREP], ["\${STAGING_DIR:-$STAGING_DIR}/../host/bin/grep"], [A grep program that handles long lines])
+_LT_DECL([], [EGREP], ["\${STAGING_DIR:-$STAGING_DIR}/../host/bin/grep -E"], [An ERE matcher])
+_LT_DECL([], [FGREP], ["\${STAGING_DIR:-$STAGING_DIR}/../host/bin/grep -F"], [A literal string matcher])
 dnl Non-bleeding-edge autoconf doesn't subst GREP, so do it here too
 AC_SUBST([GREP])
 ])

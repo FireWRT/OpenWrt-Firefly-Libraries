@@ -136,15 +136,22 @@ progpath="$0"
 
 : ${CP="cp -f"}
 test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
-: ${EGREP="grep -E"}
-: ${FGREP="grep -F"}
-: ${GREP="grep"}
 : ${LN_S="ln -s"}
 : ${MAKE="make"}
 : ${MKDIR="mkdir"}
 : ${MV="mv -f"}
 : ${RM="rm -f"}
-: ${SED="sed"}
+if test -n "$STAGING_DIR"; then
+	: ${EGREP="$STAGING_DIR/../host/bin/grep -E"}
+	: ${FGREP="$STAGING_DIR/../host/bin/grep -F"}
+	: ${GREP="$STAGING_DIR/../host/bin/grep"}
+	: ${SED="$STAGING_DIR/../host/bin/sed"}
+else
+	: ${EGREP="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/grep -E"}
+	: ${FGREP="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/grep -F"}
+	: ${GREP="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/grep"}
+	: ${SED="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/sed"}
+fi
 : ${SHELL="${CONFIG_SHELL-/bin/sh}"}
 : ${Xsed="$SED -e 1s/^X//"}
 
@@ -7072,7 +7079,7 @@ func_mode_link ()
 		  fi
 		  ;;
 		*)
-                  # OE sets installed=no in staging. We need to look in $objdir and $absdir, 
+                  # OE sets installed=no in staging. We need to look in $objdir and $absdir,
                   # preferring $objdir. RP 31/04/2008
                   if test -f "$absdir/$objdir/$depdepl" ; then
 		    depdepl="$absdir/$objdir/$depdepl"

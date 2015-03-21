@@ -18,7 +18,7 @@ config TARGET_ramips_mt7621
 	bool
 	default y
 
-config TARGET_ramips_mt7621_MT7621
+config TARGET_ramips_mt7621_Firefly
 	bool
 	default y
 
@@ -32,37 +32,21 @@ config TARGET_BOARD
 
 config TARGET_ARCH_PACKAGES
 	string
-	default "ramips_24kec"
+	default "ramips_1004kc"
 
 config DEFAULT_TARGET_OPTIMIZATION
 	string
-	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp"
+	default "-Os -pipe -mmt -mips32r2 -mtune=1004kc"
 
 config CPU_TYPE
 	string
-	default "24kec+dsp"
+	default "1004kc+dsp"
 
-config LINUX_3_10
-	bool
-	default y
-
-config DEFAULT_8021xd
-	bool
-	default y
-
-config DEFAULT_ated
+config LINUX_3_18
 	bool
 	default y
 
 config DEFAULT_base-files
-	bool
-	default y
-
-config DEFAULT_block-mount
-	bool
-	default y
-
-config DEFAULT_btnd
 	bool
 	default y
 
@@ -78,23 +62,11 @@ config DEFAULT_dropbear
 	bool
 	default y
 
-config DEFAULT_ethstt
-	bool
-	default y
-
 config DEFAULT_firewall
 	bool
 	default y
 
 config DEFAULT_fstools
-	bool
-	default y
-
-config DEFAULT_gpio
-	bool
-	default y
-
-config DEFAULT_hwnat
 	bool
 	default y
 
@@ -106,51 +78,31 @@ config DEFAULT_iptables
 	bool
 	default y
 
-config DEFAULT_kmod-fs-ntfs
+config DEFAULT_iwinfo
 	bool
 	default y
 
-config DEFAULT_kmod-fs-vfat
+config DEFAULT_kmod-gpio-button-hotplug
 	bool
 	default y
 
-config DEFAULT_kmod-ipt-nathelper
+config DEFAULT_kmod-leds-gpio
 	bool
 	default y
 
-config DEFAULT_kmod-nls-base
+config DEFAULT_kmod-ledtrig-usbdev
 	bool
 	default y
 
-config DEFAULT_kmod-nls-cp437
+config DEFAULT_kmod-mt76
 	bool
 	default y
 
-config DEFAULT_kmod-nls-cp850
+config DEFAULT_kmod-nf-nathelper
 	bool
 	default y
 
-config DEFAULT_kmod-nls-cp936
-	bool
-	default y
-
-config DEFAULT_kmod-nls-cp950
-	bool
-	default y
-
-config DEFAULT_kmod-nls-iso8859-1
-	bool
-	default y
-
-config DEFAULT_kmod-nls-iso8859-15
-	bool
-	default y
-
-config DEFAULT_kmod-nls-utf8
-	bool
-	default y
-
-config DEFAULT_kmod-scsi-generic
+config DEFAULT_kmod-sdhci-mt7620
 	bool
 	default y
 
@@ -158,7 +110,7 @@ config DEFAULT_kmod-usb-core
 	bool
 	default y
 
-config DEFAULT_kmod-usb-storage
+config DEFAULT_kmod-usb-hid
 	bool
 	default y
 
@@ -171,10 +123,6 @@ config DEFAULT_libc
 	default y
 
 config DEFAULT_libgcc
-	bool
-	default y
-
-config DEFAULT_mii_mgr
 	bool
 	default y
 
@@ -206,11 +154,7 @@ config DEFAULT_ppp-mod-pppoe
 	bool
 	default y
 
-config DEFAULT_reg
-	bool
-	default y
-
-config DEFAULT_switch
+config DEFAULT_swconfig
 	bool
 	default y
 
@@ -218,15 +162,7 @@ config DEFAULT_uci
 	bool
 	default y
 
-config DEFAULT_uci2dat
-	bool
-	default y
-
-config DEFAULT_watchdog
-	bool
-	default y
-
-config DEFAULT_wireless-tools
+config DEFAULT_wpad-mini
 	bool
 	default y
 
@@ -243,6 +179,10 @@ config PCI_SUPPORT
 	default y
 
 config USB_SUPPORT
+	bool
+	default y
+
+config USES_DEVICETREE
 	bool
 	default y
 
@@ -362,6 +302,22 @@ config USE_UCLIBCXX
 	bool
 	default y
 
+config PKG_CC_STACKPROTECTOR_NONE
+	bool
+	default y
+
+config KERNEL_CC_STACKPROTECTOR_NONE
+	bool
+	default y
+
+config PKG_FORTIFY_SOURCE_NONE
+	bool
+	default y
+
+config PKG_RELRO_NONE
+	bool
+	default y
+
 config BINARY_FOLDER
 	string
 	default ""
@@ -400,7 +356,7 @@ config EXTRA_OPTIMIZATION
 
 config TARGET_OPTIMIZATION
 	string
-	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp"
+	default "-Os -pipe -mmt -mips32r2 -mtune=1004kc"
 
 config SOFT_FLOAT
 	bool
@@ -412,7 +368,7 @@ config EXTRA_BINUTILS_CONFIG_OPTIONS
 
 config BINUTILS_VERSION
 	string
-	default "2.22"
+	default "linaro"
 
 config EXTRA_GCC_CONFIG_OPTIONS
 	string
@@ -510,6 +466,10 @@ config PER_FEED_REPO_ADD_DISABLED
 	bool
 	default y
 
+config PER_FEED_REPO_ADD_COMMENTED
+	bool
+	default y
+
 config FEED_packages
 	bool
 	default y
@@ -522,11 +482,11 @@ config FEED_routing
 	bool
 	default y
 
-config FEED_management
+config FEED_telephony
 	bool
 	default y
 
-config FEED_oldpackages
+config FEED_management
 	bool
 	default y
 
@@ -534,15 +494,7 @@ config OPKGSMIME_PASSPHRASE
 	bool
 	default y
 
-config FEATURE_drawing-backend_DirectFB
-	bool
-	default y
-
 config PACKAGE_base-files
-	bool
-	default y
-
-config PACKAGE_block-mount
 	bool
 	default y
 
@@ -1654,6 +1606,10 @@ config BUSYBOX_DEFAULT_SH_MATH_SUPPORT_64
 	bool
 	default y
 
+config BUSYBOX_DEFAULT_FEATURE_SH_NOFORK
+	bool
+	default y
+
 config BUSYBOX_DEFAULT_FEATURE_SYSLOGD_READ_BUFFER_SIZE
 	int
 	default 0
@@ -1663,6 +1619,10 @@ config BUSYBOX_DEFAULT_FEATURE_IPC_SYSLOG_BUFFER_SIZE
 	default 0
 
 config BUSYBOX_DEFAULT_LOGGER
+	bool
+	default y
+
+config BUSYBOX_CONFIG_FUSER
 	bool
 	default y
 
@@ -1694,6 +1654,14 @@ config PACKAGE_libgcc
 	bool
 	default y
 
+config PACKAGE_libpthread
+	bool
+	default y
+
+config PACKAGE_libstdcpp
+	bool
+	default y
+
 config PACKAGE_mtd
 	bool
 	default y
@@ -1707,6 +1675,14 @@ config PACKAGE_opkg
 	default y
 
 config PACKAGE_procd
+	bool
+	default y
+
+config PACKAGE_rpcd
+	bool
+	default y
+
+config PACKAGE_swconfig
 	bool
 	default y
 
@@ -1726,281 +1702,25 @@ config PACKAGE_uci
 	bool
 	default y
 
-config PACKAGE_wireless-tools
-	bool
-	default y
-
-config PACKAGE_kmod-scsi-core
-	bool
-	default y
-
-config PACKAGE_kmod-scsi-generic
-	bool
-	default y
-
-config PACKAGE_kmod-fs-ntfs
-	bool
-	default y
-
-config PACKAGE_kmod-fs-vfat
-	bool
-	default y
-
-config PACKAGE_kmod-lib-crc-ccitt
-	bool
-	default y
-
-config PACKAGE_kmod-nls-base
-	bool
-	default y
-
-config PACKAGE_kmod-nls-cp437
-	bool
-	default y
-
-config PACKAGE_kmod-nls-cp850
-	bool
-	default y
-
-config PACKAGE_kmod-nls-iso8859-1
-	bool
-	default y
-
-config PACKAGE_kmod-nls-iso8859-15
-	bool
-	default y
-
-config PACKAGE_kmod-nls-utf8
-	bool
-	default y
-
-config PACKAGE_kmod-ip6tables
-	bool
-	default y
-
-config PACKAGE_kmod-ipt-conntrack
-	bool
-	default y
-
-config PACKAGE_kmod-ipt-core
-	bool
-	default y
-
-config PACKAGE_kmod-ipt-nat
-	bool
-	default y
-
-config PACKAGE_kmod-ipt-nathelper
-	bool
-	default y
-
-config PACKAGE_kmod-ipv6
-	bool
-	default y
-
-config PACKAGE_kmod-ppp
-	bool
-	default y
-
-config PACKAGE_kmod-pppoe
-	bool
-	default y
-
-config PACKAGE_kmod-pppox
-	bool
-	default y
-
-config PACKAGE_kmod-slhc
-	bool
-	default y
-
-config PACKAGE_kmod-mmc
-	bool
-	default y
-
-config PACKAGE_kmod-sdhci
-	bool
-	default y
-
-config PACKAGE_kmod-usb-core
-	bool
-	default y
-
-config PACKAGE_kmod-usb-storage
-	bool
-	default y
-
-config PACKAGE_kmod-usb3
-	bool
-	default y
-
-config PACKAGE_kmod-cfg80211
-	bool
-	default y
-
-config PACKAGE_libip4tc
-	bool
-	default y
-
-config PACKAGE_libip6tc
-	bool
-	default y
-
-config PACKAGE_libxtables
-	bool
-	default y
-
-config PACKAGE_libblobmsg-json
-	bool
-	default y
-
-config PACKAGE_libjson-c
-	bool
-	default y
-
-config PACKAGE_libnl-tiny
-	bool
-	default y
-
-config PACKAGE_libubox
-	bool
-	default y
-
-config PACKAGE_libubus
-	bool
-	default y
-
-config PACKAGE_libuci
-	bool
-	default y
-
-config PACKAGE_luci-base_source
-	bool
-	default y
-
-config PACKAGE_luci-lib-nixio_notls
-	bool
-	default y
-
-config POSTFIX_TLS
-	bool
-	default y
-
-config POSTFIX_SASL
-	bool
-	default y
-
-config POSTFIX_LDAP
-	bool
-	default y
-
-config POSTFIX_CDB
-	bool
-	default y
-
-config PACKAGE_ip6tables
-	bool
-	default y
-
-config PACKAGE_iptables
-	bool
-	default y
-
-config PACKAGE_iw
-	bool
-	default y
-
-config PACKAGE_odhcp6c
-	bool
-	default y
-
-config PACKAGE_odhcp6c_ext_prefix_class
-	int
-	default 0
-
-config PACKAGE_odhcp6c_ext_cer_id
-	int
-	default 0
-
-config PACKAGE_odhcpd
-	bool
-	default y
-
-config PACKAGE_odhcpd_ext_prefix_class
-	int
-	default 0
-
-config PACKAGE_odhcpd_ext_cer_id
-	int
-	default 0
-
-config PACKAGE_ppp
-	bool
-	default y
-
-config PACKAGE_ppp-mod-pppoe
-	bool
-	default y
-
-config WPA_MSG_MIN_PRIORITY
-	int
-	default 3
-
-config PACKAGE_8021xd
-	bool
-	default y
-
 config PACKAGE_ated
 	bool
 	default y
 
-config PACKAGE_btnd
+config PACKAGE_mount-tools
 	bool
 	default y
 
-config PACKAGE_gpio
+config PACKAGE_mtk-nvram
 	bool
 	default y
 
-config PACKAGE_mii_mgr
-	bool
-	default y
-
-config PACKAGE_reg
-	bool
-	default y
-
-config PACKAGE_switch
-	bool
-	default y
+config NVRAM_MTD_NAME
+	string
+	default "Config"
 
 config PACKAGE_uci2dat
 	bool
 	default y
-
-config PACKAGE_watchdog
-	bool
-	default y
-
-config PACKAGE_kmod-exfat-nofuse
-	bool
-	default y
-
-config EXFAT_FS
-	tristate
-	default m
-
-config EXFAT_DISCARD
-	bool
-	default y
-
-config EXFAT_DEFAULT_CODEPAGE
-	int
-	default 437
-
-config EXFAT_DEFAULT_IOCHARSET
-	string
-	default "utf8"
 
 config PACKAGE_kmod-mt76x2e
 	bool
@@ -2098,6 +1818,10 @@ config MT76X2E_RTMP_FLASH_SUPPORT
 	bool
 	default y
 
+config MT76X2E_LED_CONTROL_SUPPORT
+	bool
+	default y
+
 config MT76X2E_ATE_SUPPORT
 	bool
 	default y
@@ -2110,7 +1834,403 @@ config MT76X2E_RLT_MAC
 	bool
 	default y
 
-config PACKAGE_kmod-mtk-mmc
+config PACKAGE_libfirefly
+	bool
+	default y
+
+config PACKAGE_kmod-scsi-core
+	bool
+	default y
+
+config PACKAGE_kmod-crypto-core
+	bool
+	default y
+
+config PACKAGE_kmod-crypto-hash
+	bool
+	default y
+
+config PACKAGE_kmod-fs-ext4
+	bool
+	default y
+
+config PACKAGE_kmod-fs-ntfs
+	bool
+	default y
+
+config PACKAGE_kmod-fs-vfat
+	bool
+	default y
+
+config PACKAGE_kmod-fuse
+	bool
+	default y
+
+config PACKAGE_kmod-hid
+	bool
+	default y
+
+config PACKAGE_kmod-hid-generic
+	bool
+	default y
+
+config PACKAGE_kmod-input-core
+	bool
+	default y
+
+config PACKAGE_kmod-input-evdev
+	bool
+	default y
+
+config PACKAGE_kmod-leds-gpio
+	bool
+	default y
+
+config PACKAGE_kmod-ledtrig-usbdev
+	bool
+	default y
+
+config PACKAGE_kmod-lib-crc-ccitt
+	bool
+	default y
+
+config PACKAGE_kmod-lib-crc16
+	bool
+	default y
+
+config PACKAGE_kmod-nls-base
+	bool
+	default y
+
+config PACKAGE_kmod-nls-cp437
+	bool
+	default y
+
+config PACKAGE_kmod-nls-cp850
+	bool
+	default y
+
+config PACKAGE_kmod-nls-iso8859-1
+	bool
+	default y
+
+config PACKAGE_kmod-nls-iso8859-15
+	bool
+	default y
+
+config PACKAGE_kmod-nls-utf8
+	bool
+	default y
+
+config PACKAGE_kmod-ip6tables
+	bool
+	default y
+
+config PACKAGE_kmod-ipt-conntrack
+	bool
+	default y
+
+config PACKAGE_kmod-ipt-core
+	bool
+	default y
+
+config PACKAGE_kmod-ipt-nat
+	bool
+	default y
+
+config PACKAGE_kmod-nf-conntrack
+	bool
+	default y
+
+config PACKAGE_kmod-nf-conntrack6
+	bool
+	default y
+
+config PACKAGE_kmod-nf-ipt
+	bool
+	default y
+
+config PACKAGE_kmod-nf-ipt6
+	bool
+	default y
+
+config PACKAGE_kmod-nf-nat
+	bool
+	default y
+
+config PACKAGE_kmod-nf-nathelper
+	bool
+	default y
+
+config PACKAGE_kmod-ipv6
+	bool
+	default y
+
+config PACKAGE_kmod-ppp
+	bool
+	default y
+
+config PACKAGE_kmod-pppoe
+	bool
+	default y
+
+config PACKAGE_kmod-pppox
+	bool
+	default y
+
+config PACKAGE_kmod-slhc
+	bool
+	default y
+
+config PACKAGE_kmod-gpio-button-hotplug
+	bool
+	default y
+
+config PACKAGE_kmod-mmc
+	bool
+	default y
+
+config PACKAGE_kmod-sdhci
+	bool
+	default y
+
+config PACKAGE_kmod-sdhci-mt7620
+	bool
+	default y
+
+config PACKAGE_kmod-usb-core
+	bool
+	default y
+
+config PACKAGE_kmod-usb-hid
+	bool
+	default y
+
+config PACKAGE_kmod-usb-storage
+	bool
+	default y
+
+config PACKAGE_kmod-usb3
+	bool
+	default y
+
+config PACKAGE_kmod-cfg80211
+	bool
+	default y
+
+config PACKAGE_libiwinfo-lua
+	bool
+	default y
+
+config PACKAGE_lua
+	bool
+	default y
+
+config PACKAGE_libip4tc
+	bool
+	default y
+
+config PACKAGE_libip6tc
+	bool
+	default y
+
+config PACKAGE_libxtables
+	bool
+	default y
+
+config PACKAGE_libblkid
+	bool
+	default y
+
+config PACKAGE_libblobmsg-json
+	bool
+	default y
+
+config PACKAGE_libiwinfo
+	bool
+	default y
+
+config PACKAGE_libjson-c
+	bool
+	default y
+
+config PACKAGE_liblua
+	bool
+	default y
+
+config PACKAGE_libnl-tiny
+	bool
+	default y
+
+config PACKAGE_libsmartcols
+	bool
+	default y
+
+config PACKAGE_libubox
+	bool
+	default y
+
+config PACKAGE_libubus
+	bool
+	default y
+
+config PACKAGE_libubus-lua
+	bool
+	default y
+
+config PACKAGE_libuci
+	bool
+	default y
+
+config PACKAGE_libuci-lua
+	bool
+	default y
+
+config PACKAGE_libuuid
+	bool
+	default y
+
+config PACKAGE_luci
+	bool
+	default y
+
+config PACKAGE_luci-base
+	bool
+	default y
+
+config PACKAGE_luci-mod-admin-full
+	bool
+	default y
+
+config PACKAGE_luci-mod-rpc
+	bool
+	default y
+
+config PACKAGE_luci-app-firewall
+	bool
+	default y
+
+config PACKAGE_luci-app-fpkgmanager
+	bool
+	default y
+
+config PACKAGE_luci-theme-bootstrap
+	bool
+	default y
+
+config PACKAGE_luci-theme-firefly
+	bool
+	default y
+
+config PACKAGE_luci-proto-ppp
+	bool
+	default y
+
+config PACKAGE_luci-lib-ip
+	bool
+	default y
+
+config PACKAGE_luci-lib-json
+	bool
+	default y
+
+config PACKAGE_luci-lib-nixio
+	bool
+	default y
+
+config POSTFIX_TLS
+	bool
+	default y
+
+config POSTFIX_SASL
+	bool
+	default y
+
+config POSTFIX_LDAP
+	bool
+	default y
+
+config POSTFIX_CDB
+	bool
+	default y
+
+config PACKAGE_ip6tables
+	bool
+	default y
+
+config PACKAGE_iptables
+	bool
+	default y
+
+config PACKAGE_openssh-sftp-server
+	bool
+	default y
+
+config PACKAGE_uhttpd
+	bool
+	default y
+
+config PACKAGE_uhttpd-mod-ubus
+	bool
+	default y
+
+config PACKAGE_iw
+	bool
+	default y
+
+config PACKAGE_odhcp6c
+	bool
+	default y
+
+config PACKAGE_odhcp6c_ext_prefix_class
+	int
+	default 0
+
+config PACKAGE_odhcp6c_ext_cer_id
+	int
+	default 0
+
+config PACKAGE_odhcpd
+	bool
+	default y
+
+config PACKAGE_odhcpd_ext_prefix_class
+	int
+	default 0
+
+config PACKAGE_odhcpd_ext_cer_id
+	int
+	default 0
+
+config PACKAGE_ppp
+	bool
+	default y
+
+config PACKAGE_ppp-mod-pppoe
+	bool
+	default y
+
+config WPA_MSG_MIN_PRIORITY
+	int
+	default 3
+
+config PACKAGE_wpad-mini
+	bool
+	default y
+
+config PACKAGE_ntfs-3g
+	bool
+	default y
+
+config PACKAGE_blkid
+	bool
+	default y
+
+config PACKAGE_fdisk
+	bool
+	default y
+
+config PACKAGE_iwinfo
 	bool
 	default y
 
@@ -2119,6 +2239,10 @@ config PACKAGE_jshn
 	default y
 
 config PACKAGE_libjson-script
+	bool
+	default y
+
+config PACKAGE_losetup
 	bool
 	default y
 

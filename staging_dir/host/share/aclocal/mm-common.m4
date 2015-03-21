@@ -43,5 +43,5 @@ AC_DEFUN([MM_PREREQ],
 [dnl
 m4_assert([$# >= 1])[]dnl
 AC_REQUIRE([_MM_PRE_INIT])[]dnl
-_MM_PREREQ([mm-common], [0.9.6], [$1], m4_defn([AC_PACKAGE_NAME]))[]dnl
+_MM_PREREQ([mm-common], [0.9.7], [$1], m4_defn([AC_PACKAGE_NAME]))[]dnl
 ])

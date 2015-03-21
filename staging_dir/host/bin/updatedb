@@ -175,7 +175,7 @@ test -z "$PRUNEREGEX" &&
   PRUNEREGEX=`echo $PRUNEPATHS|sed -e 's,^,\\\(^,' -e 's, ,$\\\)\\\|\\\(^,g' -e 's,$,$\\\),'`
 
 # The database file to build.
-: ${LOCATE_DB=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/var/locatedb}
+: ${LOCATE_DB=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/var/locatedb}
 
 # Directory to hold intermediate files.
 if test -d /var/tmp; then
@@ -194,14 +194,14 @@ export TMPDIR
 if test -n "$LIBEXECDIR" ; then
     : LIBEXECDIR already set, do nothing
 else
-    : ${LIBEXECDIR=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/libexec}
+    : ${LIBEXECDIR=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/libexec}
 fi
 
 # The directory containing find.
 if test -n "$BINDIR" ; then
     : BINDIR already set, do nothing
 else
-    : ${BINDIR=/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin}
+    : ${BINDIR=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin}
 fi
 
 # The names of the utilities to run to build the database.

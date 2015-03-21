@@ -1,8 +1,8 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status (libtool) 2.4
-# Libtool was configured on host midserver:
+# Libtool was configured on host tchip-server:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -65,7 +65,7 @@ pic_mode=default
 fast_install=yes
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/bash"
+SHELL="/usr/bin/env bash"
 
 # An echo program that protects backslashes.
 ECHO="printf %s\\n"
@@ -81,19 +81,19 @@ build=x86_64-pc-linux-gnu
 build_os=linux-gnu
 
 # A sed program that does not truncate output.
-SED="/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin/sed"
+SED="${STAGING_DIR:-/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2}/../host/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"
 
 # A grep program that handles long lines.
-GREP="/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin/grep"
+GREP="${STAGING_DIR:-/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2}/../host/bin/grep"
 
 # An ERE matcher.
-EGREP="/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin/grep -E"
+EGREP="${STAGING_DIR:-/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2}/../host/bin/grep -E"
 
 # A literal string matcher.
-FGREP="/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/bin/grep -F"
+FGREP="${STAGING_DIR:-/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2}/../host/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
 NM="/usr/bin/nm -B"
@@ -164,7 +164,7 @@ lock_old_archive_extraction=no
 LTCC="gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-O2 -I/home/wengbj/project/openwrt-3.10/mtk/openwrt-3.10.14/staging_dir/host/include"
+LTCFLAGS="-O2 -I${STAGING_DIR:-/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2}/../host/include"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p' | sed '/ __gnu_lto/d'"
@@ -272,7 +272,7 @@ finish_eval=""
 hardcode_into_libs=no
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/usr/lib/gcc/x86_64-linux-gnu/4.6 /usr/lib/x86_64-linux-gnu /usr/lib /lib/x86_64-linux-gnu /lib "
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-linux-gnu/4.4.7 /usr/lib/x86_64-linux-gnu /usr/lib /lib/x86_64-linux-gnu /lib "
 
 # Run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/mesa /lib32 /usr/lib32 "
@@ -583,15 +583,22 @@ progpath="$0"
 
 : ${CP="cp -f"}
 test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
-: ${EGREP="grep -E"}
-: ${FGREP="grep -F"}
-: ${GREP="grep"}
 : ${LN_S="ln -s"}
 : ${MAKE="make"}
 : ${MKDIR="mkdir"}
 : ${MV="mv -f"}
 : ${RM="rm -f"}
-: ${SED="sed"}
+if test -n "$STAGING_DIR"; then
+	: ${EGREP="$STAGING_DIR/../host/bin/grep -E"}
+	: ${FGREP="$STAGING_DIR/../host/bin/grep -F"}
+	: ${GREP="$STAGING_DIR/../host/bin/grep"}
+	: ${SED="$STAGING_DIR/../host/bin/sed"}
+else
+	: ${EGREP="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/grep -E"}
+	: ${FGREP="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/grep -F"}
+	: ${GREP="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/grep"}
+	: ${SED="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/sed"}
+fi
 : ${SHELL="${CONFIG_SHELL-/bin/sh}"}
 : ${Xsed="$SED -e 1s/^X//"}
 
@@ -7512,7 +7519,7 @@ func_mode_link ()
 		  fi
 		  ;;
 		*)
-                  # OE sets installed=no in staging. We need to look in $objdir and $absdir, 
+                  # OE sets installed=no in staging. We need to look in $objdir and $absdir,
                   # preferring $objdir. RP 31/04/2008
                   if test -f "$absdir/$objdir/$depdepl" ; then
 		    depdepl="$absdir/$objdir/$depdepl"
