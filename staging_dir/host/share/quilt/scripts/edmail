@@ -1,4 +1,4 @@
-#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -w
+#! /home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/bin/perl -w
 
 # RFCs important for this script:
 #
@@ -29,7 +29,7 @@ BEGIN {
 }
 
 setlocale(LC_MESSAGES, "");
-bindtextdomain("quilt", $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/locale' : "/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/locale");
+bindtextdomain("quilt", $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/locale' : "/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/share/locale");
 textdomain("quilt");
 
 sub _($) {

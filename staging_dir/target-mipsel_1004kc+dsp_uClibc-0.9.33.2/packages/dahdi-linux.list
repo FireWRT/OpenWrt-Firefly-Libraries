@@ -1,0 +1,10 @@
+./
+./usr
+./usr/include
+./usr/include/dahdi
+./usr/include/dahdi/wctdm_user.h
+./usr/include/dahdi/user.h
+./usr/include/dahdi/dahdi_config.h
+./usr/include/dahdi/kernel.h
+./usr/include/dahdi/fasthdlc.h
+./host

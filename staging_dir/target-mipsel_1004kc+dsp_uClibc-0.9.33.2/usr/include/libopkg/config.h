@@ -51,7 +51,7 @@
 /* #undef HAVE_NDIR_H */
 
 /* Define if you want OpenSSL support */
-/* #undef HAVE_OPENSSL */
+#define HAVE_OPENSSL 1
 
 /* we have pathfinder */
 /* #undef HAVE_PATHFINDER */
@@ -63,7 +63,7 @@
 #define HAVE_REGEX_H 1
 
 /* Define if you want sha256 support */
-/* #undef HAVE_SHA256 */
+#define HAVE_SHA256 1
 
 /* Define if you want certificate authentication with curl */
 /* #undef HAVE_SSLCURL */
@@ -135,6 +135,9 @@
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
+
+/* Define if you want usign support */
+/* #undef HAVE_USIGN */
 
 /* Define to 1 if you have the `utime' function. */
 #define HAVE_UTIME 1

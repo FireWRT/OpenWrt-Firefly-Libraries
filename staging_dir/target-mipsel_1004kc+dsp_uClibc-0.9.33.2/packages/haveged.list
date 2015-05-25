@@ -1,0 +1,10 @@
+./
+./usr
+./usr/include
+./usr/include/havege.h
+./usr/lib
+./usr/lib/libhavege.so
+./usr/lib/libhavege.so.1.1.0
+./usr/lib/libhavege.so.1
+./usr/lib/libhavege.a
+./host

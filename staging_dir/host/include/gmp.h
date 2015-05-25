@@ -2217,7 +2217,7 @@ enum
 
 /* Define CC and CFLAGS which were used to build this version of GMP */
 #define __GMP_CC "gcc -std=gnu99"
-#define __GMP_CFLAGS "-O2 -I/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/include -I/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/usr/include"
+#define __GMP_CFLAGS "-O2 -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/include -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/usr/include"
 
 /* Major version number is the value of __GNU_MP__ too, above and in mp.h. */
 #define __GNU_MP_VERSION            5

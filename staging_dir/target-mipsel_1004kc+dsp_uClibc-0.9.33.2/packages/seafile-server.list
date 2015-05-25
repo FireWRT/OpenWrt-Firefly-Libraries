@@ -1,0 +1,15 @@
+./
+./usr
+./usr/include
+./usr/include/seafile
+./usr/include/seafile/monitor-rpc.h
+./usr/include/seafile/seafile.h
+./usr/include/seafile/seafile-object.h
+./usr/include/seafile/seafile-rpc.h
+./usr/lib
+./usr/lib/libseafile.so.0.0.0
+./usr/lib/libseafile.so.0
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libseafile.pc
+./usr/lib/libseafile.so
+./host

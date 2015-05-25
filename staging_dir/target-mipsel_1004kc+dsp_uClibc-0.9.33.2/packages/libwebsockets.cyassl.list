@@ -1,0 +1,16 @@
+./
+./usr
+./usr/include
+./usr/include/lws_config.h
+./usr/include/libwebsockets.h
+./usr/lib
+./usr/lib/libwebsockets.so
+./usr/lib/cmake
+./usr/lib/cmake/libwebsockets
+./usr/lib/cmake/libwebsockets/LibwebsocketsTargets-release.cmake
+./usr/lib/cmake/libwebsockets/LibwebsocketsTargets.cmake
+./usr/lib/libwebsockets.so.5
+./usr/lib/libwebsockets.a
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libwebsockets.pc
+./host

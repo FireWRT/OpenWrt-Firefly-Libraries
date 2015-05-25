@@ -1,9 +1,11 @@
-#!/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -w
+#!/usr/bin/env perl
 # -*- perl -*-
 # Generated from bin/automake.in; do not edit by hand.
 
-eval 'case $# in 0) exec /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -S "$0";; *) exec /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /usr/bin/env perl -S "$0";; *) exec /usr/bin/env perl -S "$0" "$@";; esac'
     if 0;
+
+$^W = 1;
 
 # automake - create Makefile.in from Makefile.am
 # Copyright (C) 1994-2014 Free Software Foundation, Inc.
@@ -31,7 +33,7 @@ use strict;
 
 BEGIN
 {
-  @Automake::perl_libdirs = ($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/automake-1.15')
+  @Automake::perl_libdirs = ($ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/share/automake-1.15')
     unless @Automake::perl_libdirs;
   unshift @INC, @Automake::perl_libdirs;
 

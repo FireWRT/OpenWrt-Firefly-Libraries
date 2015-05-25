@@ -2315,28 +2315,31 @@ TRACE_EVENT(drv_tdls_recv_channel_switch,
 TRACE_EVENT(drv_wake_tx_queue,
 	TP_PROTO(struct ieee80211_local *local,
 		 struct ieee80211_sub_if_data *sdata,
-		 struct ieee80211_sta *sta,
-		 u8 tid),
+		 struct txq_info *txq),
 
-	TP_ARGS(local, sdata, sta, tid),
+	TP_ARGS(local, sdata, txq),
 
 	TP_STRUCT__entry(
 		LOCAL_ENTRY
 		VIF_ENTRY
 		STA_ENTRY
+		__field(u8, ac)
 		__field(u8, tid)
 	),
 
 	TP_fast_assign(
+		struct ieee80211_sta *sta = txq->txq.sta;
+
 		LOCAL_ASSIGN;
 		VIF_ASSIGN;
 		STA_ASSIGN;
-		__entry->tid = tid;
+		__entry->ac = txq->txq.ac;
+		__entry->tid = txq->txq.tid;
 	),
 
 	TP_printk(
-		LOCAL_PR_FMT  VIF_PR_FMT  STA_PR_FMT " tid: 0x%x",
-		LOCAL_PR_ARG, VIF_PR_ARG, STA_PR_ARG, __entry->tid
+		LOCAL_PR_FMT  VIF_PR_FMT  STA_PR_FMT " ac:%d tid:%d",
+		LOCAL_PR_ARG, VIF_PR_ARG, STA_PR_ARG, __entry->ac, __entry->tid
 	)
 );
 

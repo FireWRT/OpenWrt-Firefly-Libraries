@@ -1,0 +1,22 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+
+share=/usr/share/yate
+config=/etc/yate
+modules=${exec_prefix}/lib/yate
+skins=${share}/skins
+scripts=${share}/scripts
+helpdir=${share}/help
+
+yate=yate
+yate_config=yate-config
+
+Name: Yate
+Description: Yet Another Telephony Engine
+URL: http://yate.null.ro/
+Version: 5.4.2
+Libs: -L${libdir} -lyate -rdynamic -shared -Wl,--unresolved-symbols=ignore-in-shared-libs -Wl,--retain-symbols-file,/dev/null
+Cflags: -I${includedir}/yate -Wno-overloaded-virtual -frtti -fno-exceptions -fPIC -DHAVE_GCC_FORMAT_CHECK -DHAVE_BLOCK_RETURN

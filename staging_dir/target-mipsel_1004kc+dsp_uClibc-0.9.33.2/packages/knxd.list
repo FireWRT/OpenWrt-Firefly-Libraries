@@ -1,0 +1,12 @@
+./
+./usr
+./usr/include
+./usr/include/eibloadresult.h
+./usr/include/eibclient.h
+./usr/include/eibtypes.h
+./usr/lib
+./usr/lib/libeibclient.so.0
+./usr/lib/libeibclient.so
+./usr/lib/libeibclient.a
+./usr/lib/libeibclient.so.0.0.0
+./host

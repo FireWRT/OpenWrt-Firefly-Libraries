@@ -94,13 +94,16 @@
  * of letting mac80211 push them via drv_tx().
  * Other frames (e.g. control or management) are still pushed using drv_tx().
  *
+ * Drivers indicate that they use this model by implementing the .wake_tx_queue
+ * driver operation.
+ *
  * Intermediate queues (struct ieee80211_txq) are kept per-sta per-tid, with a
  * single per-vif queue for multicast data frames.
  *
  * The driver is expected to initialize its private per-queue data for stations
  * and interfaces in the .add_interface and .sta_add ops.
  *
- * The driver can not access the queue directly. To dequeue a frame, it calls
+ * The driver can't access the queue directly. To dequeue a frame, it calls
  * ieee80211_tx_dequeue(). Whenever mac80211 adds a new frame to a queue, it
  * calls the .wake_tx_queue driver op.
  *
@@ -109,8 +112,9 @@
  * ieee80211_sta_set_buffered(). For frames buffered in the ieee80211_txq
  * struct, mac80211 sets the appropriate TIM PVB bits and calls
  * .release_buffered_frames().
- * That callback is expected to release its own buffered frames and afterwards
- * also frames from the ieee80211_txq (obtained via ieee80211_tx_dequeue).
+ * In that callback the driver is therefore expected to release its own
+ * buffered frames and afterwards also frames from the ieee80211_txq (obtained
+ * via the usual ieee80211_tx_dequeue).
  */
 
 struct device;
@@ -1277,6 +1281,7 @@ enum ieee80211_vif_flags {
  *	monitor interface (if that is requested.)
  * @drv_priv: data area for driver use, will always be aligned to
  *	sizeof(void *).
+ * @txq: the multicast data TX queue (if driver uses the TXQ abstraction)
  */
 struct ieee80211_vif {
 	enum nl80211_iftype type;
@@ -1534,6 +1539,7 @@ struct ieee80211_sta_rates {
  * @tdls_initiator: indicates the STA is an initiator of the TDLS link. Only
  *	valid if the STA is a TDLS peer in the first place.
  * @mfp: indicates whether the STA uses management frame protection or not.
+ * @txq: per-TID data TX queues (if driver uses the TXQ abstraction)
  */
 struct ieee80211_sta {
 	u32 supp_rates[IEEE80211_NUM_BANDS];
@@ -5322,12 +5328,10 @@ size_t ieee80211_ie_split(const u8 *ies, size_t ielen,
  * ieee80211_tx_dequeue - dequeue a packet from a software tx queue
  *
  * @hw: pointer as obtained from ieee80211_alloc_hw()
- * @txq: pointer obtained from .add_tx_queue() call
+ * @txq: pointer obtained from station or virtual interface
  *
  * Returns the skb if successful, %NULL if no frame was available.
  */
 struct sk_buff *ieee80211_tx_dequeue(struct ieee80211_hw *hw,
 				     struct ieee80211_txq *txq);
-
-
 #endif /* MAC80211_H */

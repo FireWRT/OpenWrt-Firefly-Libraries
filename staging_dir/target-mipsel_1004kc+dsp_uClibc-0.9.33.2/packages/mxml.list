@@ -1,0 +1,11 @@
+./
+./usr
+./usr/include
+./usr/include/mxml.h
+./usr/lib
+./usr/lib/libmxml.so
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/mxml.pc
+./usr/lib/libmxml.so.1
+./usr/lib/libmxml.so.1.5
+./host

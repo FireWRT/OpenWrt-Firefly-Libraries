@@ -1,0 +1,8 @@
+./
+./usr
+./usr/include
+./usr/include/soxr.h
+./usr/lib
+./usr/lib/libsoxr-lsr.a
+./usr/lib/libsoxr.a
+./host

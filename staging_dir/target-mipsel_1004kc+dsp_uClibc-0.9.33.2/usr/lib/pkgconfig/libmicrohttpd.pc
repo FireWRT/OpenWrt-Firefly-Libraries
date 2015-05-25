@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libmicrohttpd
+Description: A library for creating an embedded HTTP server
+Version: 0.9.38
+Requires:
+Conflicts:
+Libs: -L${libdir} -lmicrohttpd
+Libs.private: -lgnutls -L/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib -lgcrypt -lgpg-error  
+Cflags: -I${includedir}

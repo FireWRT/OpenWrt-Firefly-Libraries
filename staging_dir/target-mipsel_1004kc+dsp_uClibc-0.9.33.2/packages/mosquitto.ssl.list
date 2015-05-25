@@ -1,0 +1,8 @@
+./
+./usr
+./usr/include
+./usr/include/mosquitto.h
+./usr/lib
+./usr/lib/libmosquitto.so
+./usr/lib/libmosquitto.so.1
+./host

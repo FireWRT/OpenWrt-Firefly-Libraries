@@ -1,0 +1,9 @@
+./
+./usr
+./usr/include
+./usr/lib
+./usr/lib/libsctp.so
+./usr/lib/libsctp.a
+./usr/lib/libsctp.so.1
+./usr/lib/libsctp.so.1.0.16
+./host

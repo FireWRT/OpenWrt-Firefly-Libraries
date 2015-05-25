@@ -1,2 +1,2 @@
 #! /bin/sh
-exec '/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/bison' -y "$@"
+exec '/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/bin/bison' -y "$@"

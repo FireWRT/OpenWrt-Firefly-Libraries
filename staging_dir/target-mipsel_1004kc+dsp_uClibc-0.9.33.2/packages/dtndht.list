@@ -1,0 +1,14 @@
+./
+./usr
+./usr/include
+./usr/include/dtndht-0.2
+./usr/include/dtndht-0.2/dtndht
+./usr/include/dtndht-0.2/dtndht/dtndht.h
+./usr/lib
+./usr/lib/libdtndht.so
+./usr/lib/libdtndht-0.2.so.1.0.0
+./usr/lib/libdtndht-0.2.so.1
+./usr/lib/libdtndht.a
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/dtndht.pc
+./host

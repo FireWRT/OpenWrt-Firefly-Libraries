@@ -13,6 +13,7 @@ cmdlinepart.ko
 crc32.ko
 crypto.ko
 crypto_algapi.ko
+cryptomgr.ko
 deadline-iosched.ko
 firmware_class.ko
 gen_probe.ko
@@ -53,6 +54,7 @@ physmap.ko
 physmap_of.ko
 psnap.ko
 ralink-eth.ko
+rng-core.ko
 sch_fq_codel.ko
 serial_core.ko
 spi-mt7621.ko

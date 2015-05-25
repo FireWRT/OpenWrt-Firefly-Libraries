@@ -62,7 +62,7 @@
 #endif
 
 #ifndef ETIP_NEEDS_MATH_H
-#define ETIP_NEEDS_MATH_H 1
+#define ETIP_NEEDS_MATH_H 0
 #endif
 
 #ifndef ETIP_NEEDS_MATH_EXCEPTION

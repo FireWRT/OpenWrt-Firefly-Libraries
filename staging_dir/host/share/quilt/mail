@@ -1,4 +1,4 @@
-#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/bash
+#! /home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/bin/bash
 
 #  This script is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License version 2 as
@@ -68,7 +68,7 @@ first, and a last patch name of \`-' denotes the last patch in the series.
 
 --reply-to message
 	Add the appropriate headers to reply to the specified message.
-" "/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/doc/quilt/README.MAIL"
+" "/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/share/doc/quilt/README.MAIL"
 		exit 0
 	else
 		exit 1

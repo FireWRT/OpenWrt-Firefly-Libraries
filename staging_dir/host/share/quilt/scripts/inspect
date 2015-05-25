@@ -1,4 +1,4 @@
-#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/bash
+#! /home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/bin/bash
 
 #  This script is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License version 2 as
@@ -9,7 +9,7 @@
 if test -n "$STAGING_DIR"; then
 	: ${QUILT_DIR="$STAGING_DIR/../host/share/quilt"}
 else
-	: ${QUILT_DIR=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/quilt}
+	: ${QUILT_DIR=/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/share/quilt}
 fi
 
 if ! [ -r $QUILT_DIR/scripts/patchfns ]
@@ -145,7 +145,7 @@ shopt -u nullglob
 
 # wrapper script for patch and tar
 cat <<-'EOF' > $tmpdir/bin/wrapper
-	#! /home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/bin/bash
+	#! /home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/bin/bash
 
 	# find original data file by md5sum
 	original_file()

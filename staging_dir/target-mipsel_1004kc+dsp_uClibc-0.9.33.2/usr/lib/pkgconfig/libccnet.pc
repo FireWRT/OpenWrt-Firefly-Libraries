@@ -1,0 +1,11 @@
+prefix=/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/build_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/seafile-ccnet-4.1.2/ipkg-install/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libccnet
+Description: Client library for accessing ccnet service.
+Version: 1.4.2
+Libs: -L${libdir} -lccnet -L/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib -lsearpc -lgio-2.0 -lgobject-2.0 -lglib-2.0 -ljansson  -L/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib -levent  -luuid
+Cflags: -I${includedir} -pthread -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include/searpc -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include/glib-2.0 -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib/glib-2.0/include -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include  -I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include 
+Requires: gobject-2.0 glib-2.0

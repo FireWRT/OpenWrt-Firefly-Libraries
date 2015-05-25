@@ -1,10 +1,14 @@
+ahci.ko
 crc16.ko
 crypto_blkcipher.ko
 crypto_hash.ko
+exfat.ko
 ext4.ko
 fat.ko
 fuse.ko
 jbd2.ko
+libahci.ko
+libata.ko
 libblkid.so
 libblkid.so.1
 libblkid.so.1.1.0
@@ -44,3 +48,4 @@ usb-storage.ko
 usbcore.ko
 vfat.ko
 xhci-hcd.ko
+xhci-plat-hcd.ko

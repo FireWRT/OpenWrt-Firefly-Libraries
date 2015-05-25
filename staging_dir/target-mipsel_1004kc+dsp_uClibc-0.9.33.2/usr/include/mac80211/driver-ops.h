@@ -1375,7 +1375,7 @@ static inline void drv_wake_tx_queue(struct ieee80211_local *local,
 	if (!check_sdata_in_driver(sdata))
 		return;
 
-	trace_drv_wake_tx_queue(local, sdata, txq->txq.sta, txq->txq.tid);
+	trace_drv_wake_tx_queue(local, sdata, txq);
 	local->ops->wake_tx_queue(&local->hw, &txq->txq);
 }
 

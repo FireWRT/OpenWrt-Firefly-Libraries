@@ -1,0 +1,12 @@
+./
+./usr
+./usr/include
+./usr/include/artnet
+./usr/include/artnet/artnet.h
+./usr/include/artnet/packets.h
+./usr/include/artnet/common.h
+./usr/lib
+./usr/lib/libartnet.so.1.0.0
+./usr/lib/libartnet.so
+./usr/lib/libartnet.so.1
+./host

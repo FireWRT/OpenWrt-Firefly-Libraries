@@ -1,0 +1,10 @@
+./
+./usr
+./usr/include
+./usr/include/webcam.h
+./usr/lib
+./usr/lib/libwebcam.a
+./usr/lib/libwebcam.so.0
+./usr/lib/libwebcam.so.0.2.4
+./usr/lib/libwebcam.so
+./host

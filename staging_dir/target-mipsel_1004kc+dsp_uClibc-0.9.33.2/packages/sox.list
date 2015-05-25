@@ -1,0 +1,13 @@
+./
+./usr
+./usr/include
+./usr/include/include
+./usr/include/include/sox.h
+./usr/lib
+./usr/lib/libsox.so.2.0.1
+./usr/lib/libsox.a
+./usr/lib/libsox.so
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/sox.pc
+./usr/lib/libsox.so.2
+./host

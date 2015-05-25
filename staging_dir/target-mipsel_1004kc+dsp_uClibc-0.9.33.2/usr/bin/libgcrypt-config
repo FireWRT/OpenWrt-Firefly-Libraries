@@ -16,9 +16,9 @@ prefix="/usr"
 exec_prefix="/usr"
 version="1.6.1"
 includedir="${prefix}/include"
-libdir="/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib"
-gpg_error_libs="-L/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib -lgpg-error"
-gpg_error_cflags="-I/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include"
+libdir="/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib"
+gpg_error_libs="-L/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib -lgpg-error"
+gpg_error_cflags="-I/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/include"
 
 # libgcrypt values.
 libs="-lgcrypt"

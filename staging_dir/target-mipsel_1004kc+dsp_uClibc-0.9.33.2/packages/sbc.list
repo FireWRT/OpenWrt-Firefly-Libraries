@@ -1,0 +1,13 @@
+./
+./usr
+./usr/include
+./usr/include/sbc
+./usr/include/sbc/sbc.h
+./usr/lib
+./usr/lib/libsbc.so.1
+./usr/lib/libsbc.so
+./usr/lib/libsbc.a
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/sbc.pc
+./usr/lib/libsbc.so.1.2.1
+./host

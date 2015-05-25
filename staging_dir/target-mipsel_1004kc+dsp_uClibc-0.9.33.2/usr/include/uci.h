@@ -154,6 +154,13 @@ extern int uci_unload(struct uci_context *ctx, struct uci_package *p);
  * Note: uci_lookup_ptr will automatically load a config package if necessary
  * @str must not be constant, as it will be modified and used for the strings inside @ptr,
  * thus it must also be available as long as @ptr is in use.
+ *
+ * This function returns UCI_ERR_NOTFOUND if the package specified in the tuple
+ * string cannot be found.  Otherwise it will return UCI_OK.
+ *
+ * Note that failures in looking up other parts, if they are also specfied,
+ * including section and option, will also have a return value UCI_OK but with
+ * ptr->flags * UCI_LOOKUP_COMPLETE not set.
  */
 extern int uci_lookup_ptr(struct uci_context *ctx, struct uci_ptr *ptr, char *str, bool extended);
 
@@ -245,6 +252,8 @@ extern int uci_list_configs(struct uci_context *ctx, char ***list);
  * uci_set_savedir: override the default delta save directory
  * @ctx: uci context
  * @dir: directory name
+ *
+ * This will also try adding the specified dir to the end of delta pathes.
  */
 extern int uci_set_savedir(struct uci_context *ctx, const char *dir);
 
@@ -262,6 +271,8 @@ extern int uci_set_confdir(struct uci_context *ctx, const char *dir);
  *
  * This function allows you to add directories, which contain 'overlays'
  * for the active config, that will never be committed.
+ *
+ * Adding a duplicate directory will cause UCI_ERR_DUPLICATE be returned.
  */
 extern int uci_add_delta_path(struct uci_context *ctx, const char *dir);
 
@@ -448,6 +459,9 @@ struct uci_option
 	} v;
 };
 
+/*
+ * UCI_CMD_ADD is used for anonymous sections or list values
+ */
 enum uci_command {
 	UCI_CMD_ADD,
 	UCI_CMD_REMOVE,
@@ -456,7 +470,10 @@ enum uci_command {
 	UCI_CMD_REORDER,
 	UCI_CMD_LIST_ADD,
 	UCI_CMD_LIST_DEL,
+	__UCI_CMD_MAX,
+	__UCI_CMD_LAST = __UCI_CMD_MAX - 1
 };
+extern char const uci_command_char[];
 
 struct uci_delta
 {

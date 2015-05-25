@@ -1,0 +1,10 @@
+./
+./usr
+./usr/include
+./usr/include/declspec.h
+./usr/include/natpmp.h
+./usr/lib
+./usr/lib/libnatpmp.a
+./usr/lib/libnatpmp.so
+./usr/lib/libnatpmp.so.1
+./host

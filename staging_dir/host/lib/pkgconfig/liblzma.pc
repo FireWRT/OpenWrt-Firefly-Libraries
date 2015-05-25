@@ -5,8 +5,8 @@
 # You can do whatever you want with this file.
 #
 
-prefix=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host
-exec_prefix=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host
+prefix=/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host
+exec_prefix=/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 

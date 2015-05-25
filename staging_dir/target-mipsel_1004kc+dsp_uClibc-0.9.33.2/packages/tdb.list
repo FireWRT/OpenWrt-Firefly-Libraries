@@ -1,0 +1,10 @@
+./
+./usr
+./usr/include
+./usr/include/tdb.h
+./usr/lib
+./usr/lib/libtdb.so.1
+./usr/lib/libtdb.so.1.0.0
+./usr/lib/libtdb.so
+./usr/lib/libtdb.a
+./host

@@ -1,4 +1,4 @@
-# 
+#
 # Copyright (C) 2006 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
@@ -67,7 +67,11 @@ ifneq ($(strip $(PKG_UNPACK)),)
 endif
 
 EXTRA_CXXFLAGS = $(EXTRA_CFLAGS)
-DISABLE_NLS:=--disable-nls
+ifeq ($(CONFIG_BUILD_NLS),y)
+    DISABLE_NLS:=
+else
+    DISABLE_NLS:=--disable-nls
+endif
 
 CONFIGURE_PREFIX:=/usr
 CONFIGURE_ARGS = \

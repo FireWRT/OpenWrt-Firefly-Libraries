@@ -1,0 +1,10 @@
+./
+./usr
+./usr/include
+./usr/include/unbound.h
+./usr/lib
+./usr/lib/libunbound.so.2
+./usr/lib/libunbound.so
+./usr/lib/libunbound.a
+./usr/lib/libunbound.so.2.3.6
+./host

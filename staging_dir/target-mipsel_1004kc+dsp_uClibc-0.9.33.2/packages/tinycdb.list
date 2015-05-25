@@ -1,0 +1,16 @@
+./
+./usr
+./usr/man
+./usr/man/man5
+./usr/man/man5/cdb.5
+./usr/man/man3
+./usr/man/man3/cdb.3
+./usr/man/man1
+./usr/man/man1/cdb.1
+./usr/include
+./usr/include/cdb.h
+./usr/lib
+./usr/lib/libcdb.a
+./usr/bin
+./usr/bin/cdb
+./host

@@ -1,0 +1,14 @@
+./
+./usr
+./usr/include
+./usr/include/bcg729
+./usr/include/bcg729/decoder.h
+./usr/include/bcg729/encoder.h
+./usr/lib
+./usr/lib/libbcg729.a
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libbcg729.pc
+./usr/lib/libbcg729.so.0.0.0
+./usr/lib/libbcg729.so
+./usr/lib/libbcg729.so.0
+./host

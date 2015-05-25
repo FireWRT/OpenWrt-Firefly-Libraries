@@ -1,0 +1,8 @@
+./
+./usr
+./usr/include
+./usr/include/http_parser.h
+./usr/lib
+./usr/lib/libhttp_parser.so.2.3
+./usr/lib/libhttp_parser.so
+./host

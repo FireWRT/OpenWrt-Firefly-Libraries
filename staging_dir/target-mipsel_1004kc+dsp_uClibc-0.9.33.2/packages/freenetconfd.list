@@ -1,0 +1,8 @@
+./
+./usr
+./usr/include
+./usr/include/freenetconfd
+./usr/include/freenetconfd/freenetconfd.h
+./usr/include/freenetconfd/datastore.h
+./usr/include/freenetconfd/plugin.h
+./host

@@ -1,0 +1,13 @@
+./
+./usr
+./usr/include
+./usr/include/pa_linux_alsa.h
+./usr/include/portaudio.h
+./usr/lib
+./usr/lib/libportaudio.so.2.0.0
+./usr/lib/libportaudio.so
+./usr/lib/libportaudio.a
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/portaudio-2.0.pc
+./usr/lib/libportaudio.so.2
+./host

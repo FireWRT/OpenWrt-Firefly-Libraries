@@ -30,8 +30,8 @@
 #
 # Author: Thomas E. Dickey, 2006-on
 
-prefix=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr
-exec_prefix=/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr
+prefix=/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr
+exec_prefix=/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr
 
 bindir="/usr/bin"
 includedir="${prefix}/include"
@@ -85,11 +85,11 @@ ENDECHO
 	--libs)
 		if test ncurses = ncurses ; then
 		sed -e 's,^[ ]*,,' -e 's, [ ]*, ,g' -e 's,[ ]*$,,' <<-ENDECHO
-			-L$libdir -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/usr/lib -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib  -l${THIS} 
+			-L$libdir -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/usr/lib -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib  -l${THIS} 
 ENDECHO
 		else
 		sed -e 's,^[ ]*,,' -e 's, [ ]*, ,g' -e 's,[ ]*$,,' <<-ENDECHO
-			-L$libdir -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/usr/lib -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib  -l${THIS} -l${TINFO_LIB} 
+			-L$libdir -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/usr/lib -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/lib -Wl,-rpath,/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/target-mipsel_1004kc+dsp_uClibc-0.9.33.2/usr/lib  -l${THIS} -l${TINFO_LIB} 
 ENDECHO
 		fi
 		;;

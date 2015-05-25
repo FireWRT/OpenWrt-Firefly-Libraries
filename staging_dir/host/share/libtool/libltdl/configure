@@ -2728,7 +2728,8 @@ fi
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $am_cv_make_support_nested_variables" >&5
 $as_echo "$am_cv_make_support_nested_variables" >&6; }
-if test $am_cv_make_support_nested_variables = yes; then
+#if test $am_cv_make_support_nested_variables = yes; then
+if false; then
     AM_V='$(V)'
   AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
 else
@@ -4136,6 +4137,7 @@ $as_echo "$ac_cv_path_SED" >&6; }
  SED="$ac_cv_path_SED"
   rm -f conftest.sed
 
+test -z "$SED" && SED=sed
 Xsed="$SED -e 1s/^X//"
 
 
@@ -5873,6 +5875,7 @@ case $host_os in
   *)
     lock_old_archive_extraction=no ;;
 esac
+
 
 
 
@@ -8154,6 +8157,7 @@ lt_simple_link_test_code='int main(){return(0);}'
 
 
 
+
 # If no C compiler was specified, use CC.
 LTCC=${LTCC-"$CC"}
 
@@ -8181,10 +8185,6 @@ _lt_linker_boilerplate=`cat conftest.err`
 $RM -r conftest*
 
 
-## CAVEAT EMPTOR:
-## There is no encapsulation within the following macros, do not change
-## the running order or otherwise move them around unless you know exactly
-## what you are doing...
 if test -n "$compiler"; then
 
 lt_prog_compiler_no_builtin_flag=
@@ -13502,6 +13502,10 @@ DLLTOOL \
 OBJDUMP \
 SHELL \
 ECHO \
+SED \
+GREP \
+EGREP \
+FGREP \
 LD \
 NM \
 LN_S \
@@ -13519,6 +13523,7 @@ archiver_list_spec \
 STRIP \
 RANLIB \
 CC \
+CFLAGS \
 compiler \
 lt_cv_sys_global_symbol_pipe \
 lt_cv_sys_global_symbol_to_cdecl \
@@ -14414,19 +14419,19 @@ build=$build
 build_os=$build_os
 
 # A sed program that does not truncate output.
-SED="\${STAGING_DIR:-$STAGING_DIR}/../host/bin/sed"
+SED=$lt_SED
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="\$SED -e 1s/^X//"
 
 # A grep program that handles long lines.
-GREP="\${STAGING_DIR:-$STAGING_DIR}/../host/bin/grep"
+GREP=$lt_GREP
 
 # An ERE matcher.
-EGREP="\${STAGING_DIR:-$STAGING_DIR}/../host/bin/grep -E"
+EGREP=$lt_EGREP
 
 # A literal string matcher.
-FGREP="\${STAGING_DIR:-$STAGING_DIR}/../host/bin/grep -F"
+FGREP=$lt_FGREP
 
 # A BSD- or MS-compatible name lister.
 NM=$lt_NM
@@ -14497,7 +14502,7 @@ lock_old_archive_extraction=$lock_old_archive_extraction
 LTCC=$lt_CC
 
 # LTCC compiler flags.
-LTCFLAGS="-O2 -I\${STAGING_DIR:-$STAGING_DIR}/../host/include"
+LTCFLAGS=$lt_CFLAGS
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe=$lt_lt_cv_sys_global_symbol_pipe

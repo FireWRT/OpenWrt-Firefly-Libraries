@@ -1,0 +1,12 @@
+./
+./usr
+./usr/include
+./usr/include/seccomp.h
+./usr/lib
+./usr/lib/libseccomp.so.2.2.1
+./usr/lib/libseccomp.a
+./usr/lib/libseccomp.so
+./usr/lib/libseccomp.so.2
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libseccomp.pc
+./host

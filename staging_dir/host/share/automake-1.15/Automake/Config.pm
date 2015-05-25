@@ -32,7 +32,7 @@ our $PACKAGE = 'automake';
 our $PACKAGE_BUGREPORT = 'bug-automake@gnu.org';
 our $VERSION = '1.15';
 our $RELEASE_YEAR = '2014';
-our $libdir = $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/wengbj/bk/openwrt-3.14/trunk/openwrt/staging_dir/host/share/automake-1.15';
+our $libdir = $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/staging_dir/host/share/automake-1.15';
 
 our $perl_threads = 0;
 # We need at least this version for CLONE support.

@@ -7,7 +7,7 @@
 #define __UCLIBC_SUBLEVEL__ 33
 /* Automatically generated make config: don't edit */
 /* Version: 0.9.33.2 */
-/* Wed Mar 11 12:13:28 2015 */
+/* Wed May  6 16:54:59 2015 */
 #undef __TARGET_alpha__
 #undef __TARGET_arm__
 #undef __TARGET_avr32__
@@ -63,7 +63,7 @@
 #define __DO_C99_MATH__ 1
 #undef __DO_XSI_MATH__
 #undef __UCLIBC_HAS_FENV__
-#define __KERNEL_HEADERS__ "/home/wengbj/bk/openwrt-3.14/trunk/openwrt/build_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/linux-dev/include"
+#define __KERNEL_HEADERS__ "/home/wbj/project/mt7621/firewrt_build_all_app/FireWRT-OpenWrt-Firefly-FireWRT-SDK/build_dir/toolchain-mipsel_1004kc+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/linux-dev/include"
 #define __HAVE_DOT_CONFIG__ 1
 
 /* General Library Settings */
@@ -72,7 +72,7 @@
 #undef __FORCE_SHAREABLE_TEXT_SEGMENTS__
 #define __LDSO_LDD_SUPPORT__ 1
 #define __LDSO_CACHE_SUPPORT__ 1
-#undef __LDSO_PRELOAD_ENV_SUPPORT__
+#define __LDSO_PRELOAD_ENV_SUPPORT__ 1
 #undef __LDSO_PRELOAD_FILE_SUPPORT__
 #define __LDSO_BASE_FILENAME__ "ld.so"
 #undef __LDSO_STANDALONE_SUPPORT__
